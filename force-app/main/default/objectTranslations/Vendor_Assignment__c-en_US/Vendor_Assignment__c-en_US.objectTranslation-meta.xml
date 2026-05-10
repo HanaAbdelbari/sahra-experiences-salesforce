@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Vendor Assignment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Vendor Assignments</value>
+    </caseValues>
+    <layouts>
+        <layout>Vendor Assignment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage>
+            <!-- Only vendors with Approved status can be assigned to events. This vendor is
+        currently not Approved. -->
+        </errorMessage>
+        <name>Only_Approved_Vendors</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To save make sure to acknowledge that vendor quality rating is less than 3 --></errorMessage>
+        <name>Vendor_Quality_Rating</name>
+    </validationRules>
+</CustomObjectTranslation>

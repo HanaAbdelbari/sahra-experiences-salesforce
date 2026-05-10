@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Headcount_Exceeds_Venue_Capacity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Preferred_Venue__c)),
+  NOT(ISBLANK(Expected_Headcount__c)),
+  Expected_Headcount__c &gt; Preferred_Venue__r.Max_Seated__c,
+  NOT(HeadCount_Confirmation__c)
+)</errorConditionFormula>
+    <errorDisplayField>HeadCount_Confirmation__c</errorDisplayField>
+    <errorMessage>Warning: The expected headcount exceeds this venue&apos;s maximum seated capacity. Please verify before proceeding. Please Confirm using the Checkbox</errorMessage>
+</ValidationRule>

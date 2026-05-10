@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Contact_Belongs_To_Account</fullName>
+    <active>true</active>
+    <description>Prevents saving Account if Primary Contact does not belong to this Account</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Primary_Contact__c)),
+  Primary_Contact__r.AccountId &lt;&gt; Id
+)</errorConditionFormula>
+    <errorDisplayField>Primary_Contact__c</errorDisplayField>
+    <errorMessage>Primary Contact must be a Contact associated with this Account.</errorMessage>
+</ValidationRule>

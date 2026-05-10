@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Couple_Requires_Secondary_Name</fullName>
+    <active>true</active>
+    <description>If Relationship Context is &apos;Couple&apos; on a Personal Client, the Secondary Client Full Name must be populated.</description>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName = &quot;Private_Client&quot;,
+  ISPICKVAL(Relationship_Context__c, &quot;Couple&quot;),
+  ISBLANK(Secondary_Client_Full_Name__c)
+)</errorConditionFormula>
+    <errorDisplayField>Secondary_Client_Full_Name__c</errorDisplayField>
+    <errorMessage>Secondary Client Full Name is required when Relationship Context is &quot;Couple&quot;. Please enter the partner&apos;s name or change the Relationship Context.</errorMessage>
+</ValidationRule>

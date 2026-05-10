@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Preferred Venue --></label>
+    <lookupFilter>
+        <errorMessage><!-- Retired venues cannot be selected for new bookings. --></errorMessage>
+    </lookupFilter>
+    <name>Preferred_Venue__c</name>
+    <relationshipLabel><!-- Events (Preferred) --></relationshipLabel>
+</CustomFieldTranslation>

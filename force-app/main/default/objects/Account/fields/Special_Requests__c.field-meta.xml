@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Requests__c</fullName>
+    <description>Sensitive personal requests, dietary restrictions, accessibility needs, phobias, trauma triggers, or other confidential considerations. Classified as SENSITIVE per BRD SE-005 #4.c. Must be hidden from Finance Analysts and unauthorized users.</description>
+    <inlineHelpText>Capture any special accommodations, sensitivities, or confidential requests the client has shared. This information is private and should only be visible to the assigned event team.</inlineHelpText>
+    <label>Special Requests / Sensitivities</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

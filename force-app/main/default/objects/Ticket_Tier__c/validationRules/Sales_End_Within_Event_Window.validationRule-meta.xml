@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_End_Within_Event_Window</fullName>
+    <active>true</active>
+    <errorConditionFormula>Sales_End__c &gt; Event__r.Sales_Close_Date__c</errorConditionFormula>
+    <errorDisplayField>Sales_End__c</errorDisplayField>
+    <errorMessage>Sales End Date cannot be after the Event&apos;s Sales Close Date</errorMessage>
+</ValidationRule>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- test prior status --></label>
+    <name>test_prior_status__c</name>
+    <picklistValues>
+        <masterLabel>Cancelled</masterLabel>
+        <translation><!-- Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmed</masterLabel>
+        <translation><!-- Confirmed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executing</masterLabel>
+        <translation><!-- Executing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Planning</masterLabel>
+        <translation><!-- In Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inquiry</masterLabel>
+        <translation><!-- Inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proposal Sent</masterLabel>
+        <translation><!-- Proposal Sent --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

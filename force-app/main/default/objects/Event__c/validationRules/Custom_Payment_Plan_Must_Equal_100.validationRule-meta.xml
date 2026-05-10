@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Payment_Plan_Must_Equal_100</fullName>
+    <active>true</active>
+    <description>Ensures that Deposit % and Second Payment % sum to 100 when Custom Payment Plan is checked</description>
+    <errorConditionFormula>AND(
+  Custom_Payment_Plan__c = TRUE,
+  Deposit_Pct__c + Second_Payment_Percentage__c &lt;&gt; 100
+)</errorConditionFormula>
+    <errorMessage>Deposit Percentage and Second Payment Percentage must sum to 100% 
+when using a Custom Payment Plan.</errorMessage>
+</ValidationRule>

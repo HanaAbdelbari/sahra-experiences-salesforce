@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Staff Member</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <filterItems>
+            <field>User.UserRole.Name</field>
+            <operation>contains</operation>
+            <value>Social</value>
+        </filterItems>
+        <filterItems>
+            <field>User.UserRole.Name</field>
+            <operation>contains</operation>
+            <value>Sales</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Event Assignments</relationshipLabel>
+    <relationshipName>Staff_Event_Assignments</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

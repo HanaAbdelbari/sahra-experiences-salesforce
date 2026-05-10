@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marker_VIP_Referral__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Intake marker: client name via a VIP referral (e.g., referred by a board member, government official, or other high-status contact). When tRUE on a Personal Client, auto-flags High-Profile.</description>
+    <inlineHelpText>Check if this client was referred by a VIP contact who expects white-glove treatment and discretion.</inlineHelpText>
+    <label>Marker: VIP Referral</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

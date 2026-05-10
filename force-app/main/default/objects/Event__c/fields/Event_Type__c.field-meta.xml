@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Type__c</fullName>
+    <label>Event Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Product Launch</fullName>
+                <default>false</default>
+                <label>Product Launch</label>
+            </value>
+            <value>
+                <fullName>Retreat</fullName>
+                <default>false</default>
+                <label>Retreat</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Wedding</fullName>
+                <default>false</default>
+                <label>Wedding</label>
+            </value>
+            <value>
+                <fullName>Engagement</fullName>
+                <default>false</default>
+                <label>Engagement</label>
+            </value>
+            <value>
+                <fullName>Anniversary</fullName>
+                <default>false</default>
+                <label>Anniversary</label>
+            </value>
+            <value>
+                <fullName>Milestone Birthday</fullName>
+                <default>false</default>
+                <label>Milestone Birthday</label>
+            </value>
+            <value>
+                <fullName>Private Celebration</fullName>
+                <default>false</default>
+                <label>Private Celebration</label>
+            </value>
+            <value>
+                <fullName>Expo</fullName>
+                <default>false</default>
+                <label>Expo</label>
+            </value>
+            <value>
+                <fullName>Workshop Series</fullName>
+                <default>false</default>
+                <label>Workshop Series</label>
+            </value>
+            <value>
+                <fullName>Cultural Festival</fullName>
+                <default>false</default>
+                <label>Cultural Festival</label>
+            </value>
+            <value>
+                <fullName>Concert</fullName>
+                <default>false</default>
+                <label>Concert</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_allowed_from_1_to_5</fullName>
+    <active>true</active>
+    <description>quality rating allowed from 1 to 5</description>
+    <errorConditionFormula>OR ( Quality_Rating__c &lt;1,
+Quality_Rating__c &gt;5)</errorConditionFormula>
+    <errorDisplayField>Quality_Rating__c</errorDisplayField>
+    <errorMessage>Quality Rating should be between 1 and 5 inclusive</errorMessage>
+</ValidationRule>

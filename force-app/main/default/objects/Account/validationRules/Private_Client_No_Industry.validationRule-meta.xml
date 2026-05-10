@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Private_Client_No_Industry</fullName>
+    <active>true</active>
+    <description>Industry is a corporate concept. Hide it from Personal Clients to prevent data confusion.</description>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName = &quot;Private_Client&quot;,
+  NOT(ISBLANK(TEXT(Industry)))
+)</errorConditionFormula>
+    <errorDisplayField>Industry</errorDisplayField>
+    <errorMessage>Industry is not applicable to Personal Clients. Please clear the Industry field or change the record type to Corporate Client.</errorMessage>
+</ValidationRule>

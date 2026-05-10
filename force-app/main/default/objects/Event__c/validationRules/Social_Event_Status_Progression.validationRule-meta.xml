@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Social_Event_Status_Progression</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  $RecordType.DeveloperName = &apos;Social_Event&apos;,
+  OR(
+    AND(
+      ISNEW(),
+      NOT(ISPICKVAL(Status__c, &apos;Initial Inquiry&apos;))
+    ),
+    AND(
+      NOT(ISNEW()),
+      ISCHANGED(Status__c),
+      NOT(ISPICKVAL(Status__c, &apos;Cancelled&apos;)),
+      OR(
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Initial Inquiry&apos;), NOT(ISPICKVAL(Status__c, &apos;Consultation Scheduled&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Consultation Scheduled&apos;), NOT(ISPICKVAL(Status__c, &apos;Consultation Completed&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Consultation Completed&apos;), NOT(ISPICKVAL(Status__c, &apos;Proposal Sent&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Proposal Sent&apos;), NOT(ISPICKVAL(Status__c, &apos;Confirmed&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Confirmed&apos;), NOT(ISPICKVAL(Status__c, &apos;In Planning&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;In Planning&apos;), NOT(ISPICKVAL(Status__c, &apos;Executing&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Executing&apos;), NOT(ISPICKVAL(Status__c, &apos;Completed&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Completed&apos;), TRUE),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Cancelled&apos;), TRUE)
+      )
+    )
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Invalid status transition. Social Events must follow the sequence: Initial Inquiry → Consultation Scheduled → Consultation Completed → Proposal Sent → Confirmed → In Planning → Executing → Completed. No skipping or reverting is allowed.</errorMessage>
+</ValidationRule>

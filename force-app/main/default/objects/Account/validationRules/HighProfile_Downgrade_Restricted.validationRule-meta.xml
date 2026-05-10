@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HighProfile_Downgrade_Restricted</fullName>
+    <active>true</active>
+    <description>Once a Personal Client is flagged High-Profile, only users with the Sahra Privacy Override permission set can downgrade it back to Standard. Prevents accidental loss of privacy posture.</description>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName = &quot;Private Client&quot;,
+  ISCHANGED(Data_Sensitivity_Flag__c),
+  ISPICKVAL(PRIORVALUE(Data_Sensitivity_Flag__c), &quot;High-Profile&quot;),
+  ISPICKVAL(Data_Sensitivity_Flag__c, &quot;Standard&quot;),
+  NOT($Permission.Sahra_Privacy_Override)
+)</errorConditionFormula>
+    <errorDisplayField>Data_Sensitivity_Flag__c</errorDisplayField>
+    <errorMessage>Only the System Administrator or Head of Social Events can downgrade a High-Profile client to Standard. If this change is intentional, please contact them. This safeguard protects client confidentiality.</errorMessage>
+</ValidationRule>

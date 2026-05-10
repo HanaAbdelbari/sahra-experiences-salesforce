@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cultural_Religious_Considerations__c</fullName>
+    <inlineHelpText>Document any cultural practices, religious observances, or traditional customs that must be respected during planning and execution.</inlineHelpText>
+    <label>Cultural / Religious Considerations</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,55 @@
+<template>
+    <lightning-card title="Documents" icon-name="doctype:pdf">
+        <div class="slds-p-around_medium">
+            <template if:true={hasFiles}>
+                <template for:each={files} for:item="file">
+                    <div key={file.Id} 
+                         class="slds-m-bottom_small slds-grid slds-grid_align-spread">
+                        
+                        <!-- File name -->
+                        <div class="slds-col">
+                            <lightning-icon 
+                                icon-name="doctype:pdf" 
+                                size="small"
+                                class="slds-m-right_x-small">
+                            </lightning-icon>
+                            <span>{file.Title}</span>
+                        </div>
+
+                        <!-- Action buttons -->
+                        <div class="slds-col slds-no-flex">
+                            <!-- Preview button -->
+                            <lightning-button-icon
+                                icon-name="utility:preview"
+                                variant="border-filled"
+                                alternative-text="Preview"
+                                title="Preview Document"
+                                data-id={file.ContentDocumentId}
+                                onclick={handlePreview}
+                                class="slds-m-right_x-small">
+                            </lightning-button-icon>
+
+                            <!-- Download button -->
+                            <a href={file.downloadUrl} 
+                               target="_blank">
+                                <lightning-button-icon
+                                    icon-name="utility:download"
+                                    variant="border-filled"
+                                    alternative-text="Download"
+                                    title="Download Document">
+                                </lightning-button-icon>
+                            </a>
+                        </div>
+
+                    </div>
+                </template>
+            </template>
+
+            <template if:false={hasFiles}>
+                <p class="slds-text-color_weak">
+                    No contract document uploaded yet.
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

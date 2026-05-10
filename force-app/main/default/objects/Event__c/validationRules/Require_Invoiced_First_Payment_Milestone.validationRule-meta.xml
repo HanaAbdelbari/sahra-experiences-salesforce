@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Invoiced_First_Payment_Milestone</fullName>
+    <active>true</active>
+    <description>Blocks moving to Confirmed until Deposit milestone is Invoiced</description>
+    <errorConditionFormula>AND(ISPICKVAL(Status__c, &apos;Confirmed&apos;),
+  Deposit_Milestone_Invoiced__c = FALSE)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Cannot move to Confirmed until the client has been invoiced for the Deposit payment milestone</errorMessage>
+</ValidationRule>

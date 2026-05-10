@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Against_Discount</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Discount_Pct__c &gt; 0.10, ISPICKVAL( Status__c ,&quot;Proposal Sent&quot;) ,  NOT(Is_Discount_Approved__c) )</errorConditionFormula>
+    <errorMessage>Managers must approve Discount more than 10% before you can proceed to event Status: &quot;Proposal Sent&quot;. Please Click &apos;Submit for Approval&apos; button to request an approval .</errorMessage>
+</ValidationRule>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Financial_Edit_After_Lock</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  /* Check if 30 days have passed since Event End */
+  Event_End_Date__c + 30 &lt; TODAY(),
+  
+  /* Check if status is Completed */
+  ISPICKVAL(Status__c, &apos;Completed&apos;),
+  
+  /* Check if financial fields are being changed */
+  OR(
+    ISCHANGED(Quoted_Price__c),
+    ISCHANGED(Estimated_Budget__c)
+  ),
+  
+  /* Allow if user has Finance Adjustment permission set */
+  NOT($Permission.Finance_Adjust)
+)</errorConditionFormula>
+    <errorMessage>Financial fields are locked 30 days after event completion. Contact Finance team for adjustments.</errorMessage>
+</ValidationRule>

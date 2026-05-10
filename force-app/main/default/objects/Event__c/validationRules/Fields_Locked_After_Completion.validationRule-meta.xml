@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fields_Locked_After_Completion</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  Text(Status__c) = &apos;Completed&apos;,
+  TODAY() &gt; Event_End_Date__c + 30
+)</errorConditionFormula>
+    <errorMessage>This event is locked. Financial fields can only be edited by users with the Finance Adjustment permission.</errorMessage>
+</ValidationRule>

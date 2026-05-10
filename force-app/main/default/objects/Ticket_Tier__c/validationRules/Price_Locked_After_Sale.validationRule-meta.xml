@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Locked_After_Sale</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(ISNEW()),
+  ISCHANGED(Price__c),
+  Qty_Sold__c &gt; 0
+)</errorConditionFormula>
+    <errorDisplayField>Price__c</errorDisplayField>
+    <errorMessage>Price cannot be changed after tickets have been sold — close this tier and create a new one</errorMessage>
+</ValidationRule>

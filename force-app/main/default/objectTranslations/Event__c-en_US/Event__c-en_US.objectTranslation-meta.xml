@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Events</value>
+    </caseValues>
+    <layouts>
+        <layout>Corporate Event Layout</layout>
+        <sections>
+            <label><!-- Cancellation --></label>
+            <section>Cancellation</section>
+        </sections>
+        <sections>
+            <label><!-- Client &amp; Financials --></label>
+            <section>Client &amp; Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Readiness Checklist --></label>
+            <section>Readiness Checklist</section>
+        </sections>
+        <sections>
+            <label><!-- Wrap-Up --></label>
+            <section>Wrap-Up</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- B2B corporate engagements — conferences, retreats, product launches --></description>
+        <label><!-- Corporate Event --></label>
+        <name>Corporate_Event</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Ticketed events hosted by Sahra open to the public --></description>
+        <label><!-- Public Event --></label>
+        <name>Public_Event</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Private personal celebrations — weddings, engagements, milestones --></description>
+        <label><!-- Social Event --></label>
+        <name>Social_Event</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Cannot move to Proposal Sent. Expected Headcount, Event Type, Start Date, and Quoted Price must all be filled in. --></errorMessage>
+        <name>Block_Proposal_Sent_Missing_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Cancellation Reason must be entered before an event can be cancelled. --></errorMessage>
+        <name>Cancellation_Reason_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Client Satisfaction Rating must be between 1 and 5 --></errorMessage>
+        <name>Client_Satisfaction_Rating_Range</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>
+            <!-- Invalid status transition. Events must follow the sequence: 
+Inquiry → Proposal Sent → Confirmed → In Planning → Executing → Completed. 
+No skipping or reverting is allowed. To exit, set status to Cancelled. -->
+        </errorMessage>
+        <name>Corporate_Event_Status_Progression</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>
+            <!-- Deposit Percentage and Second Payment Percentage must sum to 100% 
+when using a Custom Payment Plan. -->
+        </errorMessage>
+        <name>Custom_Payment_Plan_Must_Equal_100</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event End Date cannot be earlier than Event Start Date. --></errorMessage>
+        <name>End_Date_Before_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This event is locked. Financial fields can only be edited by users with the Finance Adjustment permission. --></errorMessage>
+        <name>Fields_Locked_After_Completion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Warning: The expected headcount exceeds this venue&apos;s maximum seated capacity. Please verify before proceeding. Please Confirm using the Checkbox --></errorMessage>
+        <name>Headcount_Exceeds_Venue_Capacity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Event must always have an assigned Event Owner. --></errorMessage>
+        <name>Owner_Cannot_Be_Blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Financial fields are locked 30 days after event completion. Contact Finance team for adjustments. --></errorMessage>
+        <name>Prevent_Financial_Edit_After_Lock</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot create events with dates in the past. Event Start Date and Event End Date must be today or in the future. --></errorMessage>
+        <name>Prevent_Past_Event_Dates</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Corporate Events must be linked to a Corporate Client. --></errorMessage>
+        <name>Prevent_Private_Client_On_Corporate_Even</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid status transition. Social Events must follow the sequence: Initial Inquiry → Consultation Scheduled → Consultation Completed → Proposal Sent → Confirmed → In Planning → Executing → Completed. No skipping or reverting is allowed. --></errorMessage>
+        <name>Social_Event_Status_Progression</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Managers must approve Discount more than 10% before you can proceed to event Status: &quot;Proposal Sent&quot;. Please Click &apos;Submit for Approval&apos; button to request an approval . --></errorMessage>
+        <name>Validate_Against_Discount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Managers must approve high-value Quoted Price before you can proceed to event Status: &quot;Proposal Sent&quot;. Please Click &apos;Submit for Approval&apos; button to request an approval . --></errorMessage>
+        <name>Validate_Against_Quoted_Price</name>
+    </validationRules>
+</CustomObjectTranslation>

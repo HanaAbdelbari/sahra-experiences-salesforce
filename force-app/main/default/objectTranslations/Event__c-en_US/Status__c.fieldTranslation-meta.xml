@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Cancelled</masterLabel>
+        <translation><!-- Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmed</masterLabel>
+        <translation><!-- Confirmed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consultation Completed</masterLabel>
+        <translation><!-- Consultation Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consultation Scheduled</masterLabel>
+        <translation><!-- Consultation Scheduled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executing</masterLabel>
+        <translation><!-- Executing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Planning</masterLabel>
+        <translation><!-- In Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Initial Inquiry</masterLabel>
+        <translation><!-- Initial Inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inquiry</masterLabel>
+        <translation><!-- Inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Sale</masterLabel>
+        <translation><!-- On Sale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planning</masterLabel>
+        <translation><!-- Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proposal Sent</masterLabel>
+        <translation><!-- Proposal Sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Paused</masterLabel>
+        <translation><!-- Sales Paused --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sold Out</masterLabel>
+        <translation><!-- Sold Out --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voided</masterLabel>
+        <translation><!-- Voided --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

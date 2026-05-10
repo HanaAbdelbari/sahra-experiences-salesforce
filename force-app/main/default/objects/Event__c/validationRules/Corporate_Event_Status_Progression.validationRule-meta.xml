@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Corporate_Event_Status_Progression</fullName>
+    <active>true</active>
+    <description>Event cannot go to the next status unless the previous one is the directly previous status (eg. cannot go from inquiry to confirmed)
+no going back to another status</description>
+    <errorConditionFormula>AND(
+  $RecordType.DeveloperName = &apos;Corporate_Event&apos;,
+  OR(
+    AND(
+      ISNEW(),
+      NOT(ISPICKVAL(Status__c, &apos;Inquiry&apos;))
+    ),
+    AND(
+      NOT(ISNEW()),
+      ISCHANGED(Status__c),
+      NOT(ISPICKVAL(Status__c, &apos;Cancelled&apos;)),
+      OR(
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Inquiry&apos;), NOT(ISPICKVAL(Status__c, &apos;Proposal Sent&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Proposal Sent&apos;), NOT(ISPICKVAL(Status__c, &apos;Confirmed&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Confirmed&apos;), NOT(ISPICKVAL(Status__c, &apos;In Planning&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;In Planning&apos;), NOT(ISPICKVAL(Status__c, &apos;Executing&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Executing&apos;), NOT(ISPICKVAL(Status__c, &apos;Completed&apos;))),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Completed&apos;), TRUE),
+        AND(ISPICKVAL(PRIORVALUE(Status__c), &apos;Cancelled&apos;), TRUE)
+      )
+    )
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Invalid status transition. Events must follow the sequence: 
+Inquiry → Proposal Sent → Confirmed → In Planning → Executing → Completed. 
+No skipping or reverting is allowed. To exit, set status to Cancelled.</errorMessage>
+</ValidationRule>

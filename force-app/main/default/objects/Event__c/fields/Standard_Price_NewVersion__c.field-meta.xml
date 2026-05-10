@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Price_NewVersion__c</fullName>
+    <formula>IF(ISPICKVAL(Event_Type__c, &quot;Conference&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Conference.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Wedding&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Wedding.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Anniversary&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Anniversary.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Engagement&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Engagement.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Milestone Birthday&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Milestone_Birthday.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Other&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Other.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Private Celebration&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Private_Celebration.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Product Launch&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Product_Launch.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Retreat&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Retreat.Price_Per_Person__c,
+IF(ISPICKVAL(Event_Type__c, &quot;Training&quot;),
+  $CustomMetadata.Event_Type_Benchmark__mdt.Training.Price_Per_Person__c,
+0)))))))))) * Expected_Headcount__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Standard Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

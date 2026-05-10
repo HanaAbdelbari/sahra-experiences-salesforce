@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Account_Related_List</fullName>
+    <fields>Name</fields>
+    <fields>Email</fields>
+    <fields>Decision_Making_Role__c</fields>
+    <fields>Phone</fields>
+    <fields>Title</fields>
+    <label>Contact — Account Related List</label>
+</CompactLayout>

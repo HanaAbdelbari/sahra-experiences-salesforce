@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_Quality_Rating</fullName>
+    <active>true</active>
+    <errorConditionFormula>And(
+ Vendor__r.Quality_Rating__c &lt;3 ,
+Not( Quality_Rating_Acknowledged__c )
+)</errorConditionFormula>
+    <errorMessage>To save make sure to acknowledge that vendor quality rating is less than 3</errorMessage>
+</ValidationRule>

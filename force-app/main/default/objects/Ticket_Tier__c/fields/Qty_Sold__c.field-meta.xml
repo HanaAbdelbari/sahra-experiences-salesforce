@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qty_Sold__c</fullName>
+    <label>Quantity Sold</label>
+    <summaryFilterItems>
+        <field>Attendee__c.Checkin_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Refunded</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Attendee__c.Ticket_Tier__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

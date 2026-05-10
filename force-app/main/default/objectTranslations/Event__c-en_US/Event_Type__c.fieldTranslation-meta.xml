@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Event Type --></label>
+    <name>Event_Type__c</name>
+    <picklistValues>
+        <masterLabel>Anniversary</masterLabel>
+        <translation><!-- Anniversary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Concert</masterLabel>
+        <translation><!-- Concert --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference</masterLabel>
+        <translation><!-- Conference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cultural Festival</masterLabel>
+        <translation><!-- Cultural Festival --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engagement</masterLabel>
+        <translation><!-- Engagement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expo</masterLabel>
+        <translation><!-- Expo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Milestone Birthday</masterLabel>
+        <translation><!-- Milestone Birthday --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private Celebration</masterLabel>
+        <translation><!-- Private Celebration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Launch</masterLabel>
+        <translation><!-- Product Launch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retreat</masterLabel>
+        <translation><!-- Retreat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wedding</masterLabel>
+        <translation><!-- Wedding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workshop Series</masterLabel>
+        <translation><!-- Workshop Series --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

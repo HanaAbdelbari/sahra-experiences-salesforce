@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Public_Figure__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Triggers High-Profile flag via Flow</description>
+    <label>Is Public Figure</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Guest</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Guests</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please add a guest name to proceed with saving the record --></errorMessage>
+        <name>Blank_Name_Added</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>
+            <!-- Please specify the dietary restriction in the 
+&quot;Other Dietary Notes&quot; field when selecting &quot;Other&quot;. -->
+        </errorMessage>
+        <name>Other_Dietary_Restrictions_Selected</name>
+    </validationRules>
+</CustomObjectTranslation>

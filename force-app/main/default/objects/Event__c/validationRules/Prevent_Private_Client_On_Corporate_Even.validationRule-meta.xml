@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Private_Client_On_Corporate_Even</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName = &quot;Corporate_Event&quot;,
+  Account__r.RecordType.DeveloperName = &quot;Private_Client&quot;
+)</errorConditionFormula>
+    <errorMessage>Corporate Events must be linked to a Corporate Client.</errorMessage>
+</ValidationRule>

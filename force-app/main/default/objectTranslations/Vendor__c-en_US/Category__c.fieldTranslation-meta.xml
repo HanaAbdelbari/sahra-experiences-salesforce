@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Vendor Category --></label>
+    <name>Category__c</name>
+    <picklistValues>
+        <masterLabel>A/V</masterLabel>
+        <translation><!-- A/V --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Catering</masterLabel>
+        <translation><!-- Catering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Décor</masterLabel>
+        <translation><!-- Décor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entertainment</masterLabel>
+        <translation><!-- Entertainment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Photography</masterLabel>
+        <translation><!-- Photography --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security</masterLabel>
+        <translation><!-- Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transportation</masterLabel>
+        <translation><!-- Transportation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

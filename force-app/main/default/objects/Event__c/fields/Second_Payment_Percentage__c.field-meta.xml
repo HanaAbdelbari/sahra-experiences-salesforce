@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Second_Payment_Percentage__c</fullName>
+    <description>Represents the second payment percentage for a custom payment plan on Social Events. Must sum to 100% with Deposit Percentage.</description>
+    <externalId>false</externalId>
+    <label>Second Payment Percentage</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

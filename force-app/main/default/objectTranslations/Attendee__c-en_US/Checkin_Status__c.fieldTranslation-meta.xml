@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Check-In Status --></label>
+    <name>Checkin_Status__c</name>
+    <picklistValues>
+        <masterLabel>Checked In</masterLabel>
+        <translation><!-- Checked In --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Show</masterLabel>
+        <translation><!-- No Show --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Checked In</masterLabel>
+        <translation><!-- Not Checked In --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refunded</masterLabel>
+        <translation><!-- Refunded --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

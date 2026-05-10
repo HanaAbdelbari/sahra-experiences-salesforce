@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Refund_If_Checked_In</fullName>
+    <active>true</active>
+    <description>Block refund if Attendee is already Checked In</description>
+    <errorConditionFormula>ISPICKVAL (Attendee__r.Checkin_Status__c, &apos;Checked In&apos;)</errorConditionFormula>
+    <errorMessage>Cannot process a refund for a ticket that has already been used for check-in.</errorMessage>
+</ValidationRule>

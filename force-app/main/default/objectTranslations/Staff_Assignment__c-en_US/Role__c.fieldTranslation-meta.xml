@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Role --></label>
+    <name>Role__c</name>
+    <picklistValues>
+        <masterLabel>Client Liaison</masterLabel>
+        <translation><!-- Client Liaison --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead Coordinator</masterLabel>
+        <translation><!-- Lead Coordinator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistics Lead</masterLabel>
+        <translation><!-- Logistics Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On-Site Manager</masterLabel>
+        <translation><!-- On-Site Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support Staff</masterLabel>
+        <translation><!-- Support Staff --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

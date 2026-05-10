@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Past_Event_Dates</fullName>
+    <active>true</active>
+    <description>Prevents users from creating events with Event Start Date or Event End Date in the past. Allows updates to existing events even if dates are in the past (for historical record maintenance).</description>
+    <errorConditionFormula>AND(
+  /* Only apply this rule when creating a new record */
+  ISNEW(),
+  
+  /* Check if Event Start Date is in the past */
+  OR(
+    Event_Start_Date__c &lt; TODAY(),
+    Event_End_Date__c &lt; TODAY()
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Event_Start_Date__c</errorDisplayField>
+    <errorMessage>Cannot create events with dates in the past. Event Start Date and Event End Date must be today or in the future.</errorMessage>
+</ValidationRule>

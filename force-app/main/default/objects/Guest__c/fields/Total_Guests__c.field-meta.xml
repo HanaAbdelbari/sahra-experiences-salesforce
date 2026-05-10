@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Guests__c</fullName>
+    <description>add the value of all guests for this record</description>
+    <externalId>false</externalId>
+    <formula>if(ISPICKVAL(RSVP__c ,&quot;Confirmed&quot;),(1 + if(Plus_One__c,1,0)),if(ISPICKVAL(RSVP__c,&quot;Declined&quot;), 0,0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Guests</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Approved_Vendors</fullName>
+    <active>true</active>
+    <description>Prevents assigning vendors that are not in Approved status to new events.</description>
+    <errorConditionFormula>AND(
+        ISNEW(),
+        NOT(ISPICKVAL(Vendor__r.Status__c, &quot;Approved&quot;))
+        )</errorConditionFormula>
+    <errorDisplayField>Vendor__c</errorDisplayField>
+    <errorMessage>Only vendors with Approved status can be assigned to events. This vendor is
+        currently not Approved.</errorMessage>
+</ValidationRule>

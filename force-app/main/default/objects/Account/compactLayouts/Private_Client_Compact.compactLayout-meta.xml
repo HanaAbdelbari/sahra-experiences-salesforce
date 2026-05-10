@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Private_Client_Compact</fullName>
+    <fields>Display_Name__c</fields>
+    <fields>Relationship_Context__c</fields>
+    <fields>Data_Sensitivity_Flag__c</fields>
+    <fields>Preferred_Contact_Method__c</fields>
+    <fields>Phone</fields>
+    <label>Private Client Compact</label>
+</CompactLayout>

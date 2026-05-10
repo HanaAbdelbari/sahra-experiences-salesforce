@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marker_Public_Figure__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Intake marker: client is a public figure (celebrity, politician, high-net-worth individual in media). When TRUE on a Personal Client, the auto-flag flow sets Data Sensitivity Flag to High-Profile.</description>
+    <inlineHelpText>Check this box if the client is a public figure who requires heightened privacy protections.</inlineHelpText>
+    <label>Marker: Public Figure</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

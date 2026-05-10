@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marker_Media_Sensitive__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Intake marker: client explicitly requested no media coverage, no social media posts, no public acknowledgment. When TRUE on a Personal Client, auto-flags High-Profile.</description>
+    <inlineHelpText>Check if the client requires complete media blackout (no press, no Instagram, no testimonials).</inlineHelpText>
+    <label>Marker: Media-Sensitive</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
